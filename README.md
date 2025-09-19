@@ -16,20 +16,16 @@ El flujo general es:
 
 PDF → Lectura → Indexación (FAISS + embeddings) → Consulta del usuario → Generación de respuesta por IA
 
----
+## 🚀 Tecnologías y librerías utilizadas
 
-## Tecnologías y librerías utilizadas
-
-- **FastAPI:** Backend para gestionar uploads de PDFs y consultas.
-- **React + TailwindCSS:** Frontend interactivo y estilizado.
-- **python-docx / PyPDF2 / fitz:** Para lectura y extracción de texto de PDFs.
-- **SentenceTransformers:** Librería para generar **embeddings** de los fragmentos de texto.
-- **FAISS (Facebook AI Similarity Search):** Para indexar y buscar vectores de manera eficiente.
-- **Gemini Flash 2.5 (Google):** Modelo de IA encargado de generar la interpretación de emociones o respuestas a consultas.
-- **dotenv:** Para cargar variables de entorno como la API key de Gemini.
-- **CORS Middleware:** Permite comunicación entre el frontend y backend.
-
----
+- **[FastAPI](https://fastapi.tiangolo.com/):** Backend para gestionar uploads de PDFs y consultas.
+- **[React](https://reactjs.org/) + [TailwindCSS](https://tailwindcss.com/):** Frontend interactivo y estilizado.
+- **[PyPDF2](https://pypi.org/project/PyPDF2/) / [python-docx](https://python-docx.readthedocs.io/) / [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/):** Para lectura y extracción de texto de PDFs.
+- **[SentenceTransformers](https://www.sbert.net/):** Librería para generar **embeddings** de los fragmentos de texto.
+- **[FAISS](https://github.com/facebookresearch/faiss):** Para indexar y buscar vectores de manera eficiente.
+- **[Gemini Flash 2.5 (Google)](https://developers.generativeai.google/):** Modelo de IA encargado de generar la interpretación de emociones o respuestas a consultas.
+- **[python-dotenv](https://pypi.org/project/python-dotenv/):** Para cargar variables de entorno como la API key de Gemini.
+- **[CORS Middleware](https://fastapi.tiangolo.com/tutorial/cors/):** Permite comunicación entre el frontend y backend.
 
 ## Funcionamiento técnico
 
@@ -51,21 +47,6 @@ PDF → Lectura → Indexación (FAISS + embeddings) → Consulta del usuario �
    - Muestra la **preview del PDF** tras subirlo.  
    - Permite al usuario escribir consultas personalizadas.  
    - Presenta la **respuesta de la IA**, interpretando Markdown para negritas, listas y saltos de línea.
-
----
-
-## 🚀 Tecnologías utilizadas
-
-### Backend
-- [FastAPI](https://fastapi.tiangolo.com/) – Framework backend en Python
-- [Uvicorn](https://www.uvicorn.org/) – Servidor ASGI para FastAPI
-- [Google Generative AI (Gemini Flash)](https://ai.google.dev/) – Modelo de IA usado para responder queries
-- Procesamiento de documentos PDF con **PyPDF2**
-
-### Frontend
-- [React](https://react.dev/) con Vite
-- Hooks de React (`useState`, `useEffect`)
-- Estilos con **TailwindCSS**
 
 ## ⚙️ Instalación y ejecución
 
