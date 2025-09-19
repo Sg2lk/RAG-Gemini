@@ -35,7 +35,7 @@ El flujo general es:
 2. **Embeddings:**  
    Cada fragmento se transforma en un vector de alta dimensión usando `SentenceTransformer`. Esto permite representar semánticamente el contenido.
 
-3. **Indexación con FAISS:**
+3. **Indexación con FAISS:**  
    Todos los vectores se guardan en un índice FAISS, que permite buscar los fragmentos más relevantes ante cualquier consulta del usuario.
 
 5. **Consulta y generación de respuesta:**  
