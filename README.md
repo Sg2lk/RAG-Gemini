@@ -2,8 +2,6 @@
 
 Este proyecto es un **lector de PDFs potenciado con IA**, capaz de analizar documentos y responder preguntas sobre su contenido, así como extraer emociones o patrones según la consulta que se haga. Se basa en la técnica de **RAG (Retrieval-Augmented Generation)** para combinar búsqueda de información y generación de texto.
 
----
-
 ## Descripción del proyecto
 
 El sistema permite:
