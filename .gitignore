@@ -1,0 +1,25 @@
+# Entornos virtuales
+venv/
+env/
+.env
+
+# Dependencias Node
+node_modules/
+dist/
+build/
+
+# Archivos temporales
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+
+# Builds
+dist/
+build/
+
+# Archivos locales de editor
+.vscode/
+.idea/
