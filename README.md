@@ -16,6 +16,8 @@ El sistema permite:
 
 El flujo general es:
 
+PDF → Lectura → Indexación (FAISS + embeddings) → Consulta del usuario → Generación de respuesta por IA
+
 ---
 
 ## Tecnologías y librerías utilizadas
