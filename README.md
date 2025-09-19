@@ -1,6 +1,56 @@
-# 📄 RAG-Gemini
+# RAG-PDF Reader con Gemini Flash 2.5
 
-Un proyecto de **Retrieval-Augmented Generation (RAG)** que permite **subir documentos PDF**, obtener una **vista previa del contenido** y realizar consultas usando **Gemini Flash** para generar respuestas basadas en los datos del archivo.
+Este proyecto es un **lector de PDFs potenciado con IA**, capaz de analizar documentos y responder preguntas sobre su contenido, así como extraer emociones o patrones según la consulta que se haga. Se basa en la técnica de **RAG (Retrieval-Augmented Generation)** para combinar búsqueda de información y generación de texto.
+
+---
+
+## Descripción del proyecto
+
+El sistema permite:
+
+1. Subir archivos PDF y extraer su texto.
+2. Indexar el contenido en vectores semánticos usando **embeddings**.
+3. Consultar el contenido del PDF con preguntas personalizadas.
+4. Analizar emociones o extraer insights mediante la IA **Gemini Flash 2.5**.
+5. Visualizar las respuestas en un frontend React, interpretando Markdown para formato enriquecido.
+
+El flujo general es:
+
+---
+
+## Tecnologías y librerías utilizadas
+
+- **FastAPI:** Backend para gestionar uploads de PDFs y consultas.
+- **React + TailwindCSS:** Frontend interactivo y estilizado.
+- **python-docx / PyPDF2 / fitz:** Para lectura y extracción de texto de PDFs.
+- **SentenceTransformers:** Librería para generar **embeddings** de los fragmentos de texto.
+- **FAISS (Facebook AI Similarity Search):** Para indexar y buscar vectores de manera eficiente.
+- **Gemini Flash 2.5 (Google):** Modelo de IA encargado de generar la interpretación de emociones o respuestas a consultas.
+- **dotenv:** Para cargar variables de entorno como la API key de Gemini.
+- **CORS Middleware:** Permite comunicación entre el frontend y backend.
+
+---
+
+## Funcionamiento técnico
+
+1. **Lectura del PDF:**  
+   Se extrae todo el texto del PDF y se divide en **fragmentos o chunks** de tamaño configurable (por ejemplo, 300 caracteres con solapamiento de 50). Esto permite búsquedas más precisas.
+
+2. **Embeddings:**  
+   Cada fragmento se transforma en un vector de alta dimensión usando `SentenceTransformer`. Esto permite representar semánticamente el contenido.
+
+3. **Indexación con FAISS:**  
+   Todos los vectores se guardan en un índice FAISS, que permite buscar los fragmentos más relevantes ante cualquier consulta del usuario.
+
+4. **Consulta y generación de respuesta:**  
+   - El usuario envía su query desde el frontend.  
+   - Se buscan los fragmentos más relevantes usando FAISS.  
+   - Los fragmentos se envían a **Gemini Flash 2.5**, que genera una respuesta coherente y enriquecida según el contexto y la consulta.
+
+5. **Frontend React:**  
+   - Muestra la **preview del PDF** tras subirlo.  
+   - Permite al usuario escribir consultas personalizadas.  
+   - Presenta la **respuesta de la IA**, interpretando Markdown para negritas, listas y saltos de línea.
 
 ---
 
