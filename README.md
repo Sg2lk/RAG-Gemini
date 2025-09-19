@@ -17,27 +17,6 @@ Un proyecto de **Retrieval-Augmented Generation (RAG)** que permite **subir docu
 - Hooks de React (`useState`, `useEffect`)
 - Estilos con **TailwindCSS**
 
----
-
-chatbot/ # Carpeta raíz
-├── backend/ # Código del servidor (FastAPI)
-│ ├── app/
-│ │ ├── main.py # Punto de entrada del backend
-│ │ └── utils.py # Funciones auxiliares (split de texto, etc.)
-│ ├── temp_uploads/ # Carpeta temporal para PDFs
-│ └── .env # Variables de entorno (API key)
-│
-├── frontend/ # Aplicación React
-│ ├── src/
-│ │ ├── App.jsx # Componente principal
-│ │ └── ...
-│ ├── vite.config.js
-│ └── ...
-│
-└── README.md
-
----
-
 ## ⚙️ Instalación y ejecución
 
 ### 1. Clonar el repositorio
@@ -47,38 +26,38 @@ chatbot/ # Carpeta raíz
   ```
 
 ### 2. Backend (FastAPI)
-  ## 1. Crear un entorno virtual:
+  #### 1. Crear un entorno virtual:
   ```bash
   cd backend
   python -m venv env
   source env/bin/activate  # En Linux/Mac
   env\Scripts\activate     # En Windows
   ```
-  ## 2. Instalar dependencias:
+  #### 2. Instalar dependencias:
   ```bash
   pip install -r requirements.txt
   ```
-  ## 3. Configurar variables de entorno en un archivo .env:
+  #### 3. Configurar variables de entorno en un archivo .env:
   ```bash
   GEMINI_API_KEY=tu_api_key
   ```
-  ## 4. Ejecutar el servidor:
+  #### 4. Ejecutar el servidor:
   ```bash
   uvicorn app.main:app --reload
   ```
 
 ### 3. Frontend (React)
-  ## 1. Entrar en la carpeta frontend:
+  #### 1. Entrar en la carpeta frontend:
   ```bash
   cd ../frontend
   ```
 
-  ## 2. Instalar dependencias:
+  #### 2. Instalar dependencias:
   ```bash
   npm install
   ```
 
-  ## 3. Ejecutar en modo desarrollo:
+  #### 3. Ejecutar en modo desarrollo:
   ```bash
   npm run dev
   ```
