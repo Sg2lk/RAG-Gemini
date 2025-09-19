@@ -14,7 +14,7 @@ El sistema permite:
 
 El flujo general es:
 
-PDF → Lectura → Indexación (FAISS + embeddings) → Consulta del usuario → Generación de respuesta por IA
+**PDF → Lectura → Indexación (FAISS + embeddings) → Consulta del usuario → Generación de respuesta por IA**
 
 ## 🚀 Tecnologías y librerías utilizadas
 
@@ -35,15 +35,15 @@ PDF → Lectura → Indexación (FAISS + embeddings) → Consulta del usuario �
 2. **Embeddings:**  
    Cada fragmento se transforma en un vector de alta dimensión usando `SentenceTransformer`. Esto permite representar semánticamente el contenido.
 
-3. **Indexación con FAISS:**  
+3. **Indexación con FAISS:**
    Todos los vectores se guardan en un índice FAISS, que permite buscar los fragmentos más relevantes ante cualquier consulta del usuario.
 
-4. **Consulta y generación de respuesta:**  
+5. **Consulta y generación de respuesta:**  
    - El usuario envía su query desde el frontend.  
    - Se buscan los fragmentos más relevantes usando FAISS.  
    - Los fragmentos se envían a **Gemini Flash 2.5**, que genera una respuesta coherente y enriquecida según el contexto y la consulta.
 
-5. **Frontend React:**  
+6. **Frontend React:**  
    - Muestra la **preview del PDF** tras subirlo.  
    - Permite al usuario escribir consultas personalizadas.  
    - Presenta la **respuesta de la IA**, interpretando Markdown para negritas, listas y saltos de línea.
